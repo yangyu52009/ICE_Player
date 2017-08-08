@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/about.png</file>
+        <file>resource/background.png</file>
+        <file>resource/default_album.jpg</file>
+        <file>resource/full.png</file>
+        <file>resource/logo-16.png</file>
+        <file>resource/logo-32.png</file>
+        <file>resource/logo-48.png</file>
+        <file>resource/lrc_background.png</file>
+        <file>resource/lyric.png</file>
+        <file>resource/mini.png</file>
+        <file>resource/mini底部窗口（2）.png</file>
+        <file>resource/播放按钮mini.png</file>
+        <file>resource/播放按钮-主界面.png</file>
+        <file>resource/播放按钮-主界面2.png</file>
+        <file>resource/播放模式.png</file>
+        <file>resource/播放模式2.png</file>
+        <file>resource/歌词按钮.png</file>
+        <file>resource/歌词按钮2.png</file>
+        <file>resource/关闭按钮.png</file>
+        <file>resource/关闭按钮2.png</file>
+        <file>resource/迷你模式按钮.png</file>
+        <file>resource/迷你模式按钮2.png</file>
+        <file>resource/前进按钮mini.png</file>
+        <file>resource/上一曲.png</file>
+        <file>resource/上一曲2.png</file>
+        <file>resource/缩小按钮.png</file>
+        <file>resource/缩小按钮2.png</file>
+        <file>resource/添加歌曲.png</file>
+        <file>resource/添加歌曲2.png</file>
+        <file>resource/下一曲.png</file>
+        <file>resource/下一曲2.png</file>
+        <file>resource/音量调节.png</file>
+        <file>resource/音量调节2.png</file>
+        <file>resource/暂停按钮mini.png</file>
+        <file>resource/暂停按钮-主界面.png</file>
+        <file>resource/暂停按钮-主界面2.png</file>
+        <file>resource/左上角logo按钮.png</file>
+        <file>resource/左上角logo按钮2.png</file>
+    </qresource>
+</RCC>
