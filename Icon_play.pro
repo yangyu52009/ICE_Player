@@ -28,14 +28,16 @@ SOURCES += main.cpp\
     iceplayer.cpp \
     ice_button.cpp \
     icelabel.cpp \
-    ice_vol_button.cpp
+    ice_vol_button.cpp \
+    ice_miniwindow.cpp
 
 HEADERS  += \
     singleapplication.h \
     iceplayer.h \
     ice_button.h \
     icelabel.h \
-    ice_vol_button.h
+    ice_vol_button.h \
+    ice_miniwindow.h
 
 RESOURCES += \
     resource.qrc
