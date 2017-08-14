@@ -29,7 +29,9 @@ SOURCES += main.cpp\
     ice_button.cpp \
     icelabel.cpp \
     ice_vol_button.cpp \
-    ice_miniwindow.cpp
+    ice_miniwindow.cpp \
+    networker.cpp \
+    nofocusdelegate.cpp
 
 HEADERS  += \
     singleapplication.h \
@@ -37,7 +39,9 @@ HEADERS  += \
     ice_button.h \
     icelabel.h \
     ice_vol_button.h \
-    ice_miniwindow.h
+    ice_miniwindow.h \
+    networker.h \
+    nofocusdelegate.h
 
 RESOURCES += \
     resource.qrc

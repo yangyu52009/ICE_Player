@@ -14,10 +14,15 @@
 #include "ice_button.h"
 #include "icelabel.h"
 #include "ice_vol_button.h"
+#include "networker.h"
+#include "ice_miniwindow.h"
 class IcePlayer : public QWidget
 {
     Q_OBJECT
-    friend class mainwindow;
+    /*! 设置mini窗口为主窗口类的友元类，
+     * 从而使其可以直接的访问IcePlayer类的私有部分
+    */
+    friend class ICE_MiniWindow;
 
 public:
     explicit IcePlayer(QWidget *parent = 0);
@@ -80,7 +85,7 @@ private slots:
     /*! 获取播放位置*/
     int ice_get_play_position();
 private:
-    void init_ui();
+    void init_ui(); //初始化UI组件，并进行基本的设置
     void init_player();
     void init_connections();
     void init_window();
@@ -101,7 +106,7 @@ private:
     ICE_Button* m_minButton;
     ICE_Button* m_exitButton;
     ICE_Button* m_addButton;
-    ICE_Button* m_lrcButton;
+    ICE_Button* m_lyrButton;
     ICE_Button* m_lastButton;
     ICE_Button* m_nextButton;
     ICE_Button* m_playButton;
@@ -111,13 +116,13 @@ private:
     ICE_Button* m_logoButton;
 
     IceLabel* m_nameLabel;
-    QLabel* m_nusicianLabel;
+    QLabel* m_musicianLabel;
     QLabel* m_albumLabel;
     QLabel* m_timeLabel;
-    QLabel* m_picLabel;
+    QLabel* m_picLabel; //主窗口的专辑图片
 
     QSlider* m_playSlider;
-    QSlider* m_volSilider;
+    QSlider* m_volSlider;
 
     QTableWidget* playlistTabel;
 
@@ -138,7 +143,18 @@ private:
     QAction* m_removeCurr;
     QAction* m_removeAll;
 
-    ICE_Vol_Button* m_valButton; //单击显示menu窗口控制音量
+    ICE_Vol_Button* m_volButton; //单击显示menu窗口控制音量的按钮
+    ICE_MiniWindow* m_miniForm;
+
+    NetWorker* networker;
+    QString songName;
+    QString songArtist;
+    QString songId;
+    QString picUrl;
+    QString lrcUrl;
+    int receiveState;
+
+    int playPosition;
 
 };
 

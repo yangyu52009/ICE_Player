@@ -1,6 +1,4 @@
-﻿#include "mainwindow.h"
-
-#include <QFileInfo>
+﻿#include <QFileInfo>
 #include <QStringList>
 #include <QSettings>
 
