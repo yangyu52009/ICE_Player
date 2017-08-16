@@ -16,6 +16,24 @@
 #include "ice_vol_button.h"
 #include "networker.h"
 #include "ice_miniwindow.h"
+#include "ice_lrc.h"
+//枚举播放模式
+enum ICE_Play_Mode
+{
+    SINGAL = 0, //单曲，只放一次
+    LISTCIRCLE, //列表循环
+    SINGALCIRCLE, //单曲循环
+    RANDOM    //随机
+};
+enum
+{
+    RECEIVE_INFO = 0, //网络音乐信息
+    RECEIVE_LINK, //
+    RECEIVE_PIC, //专辑图片
+    RECEIVE_LRC //歌词
+};
+
+
 class IcePlayer : public QWidget
 {
     Q_OBJECT
@@ -86,12 +104,13 @@ private slots:
     int ice_get_play_position();
 private:
     void init_ui(); //初始化UI组件，并进行基本的设置
-    void init_player();
-    void init_connections();
-    void init_window();
-    void init_menu_acions();
+    void init_player(); //初始化播放器及其相关类
+    void init_connections();//连接用到的信号和槽
+    void init_window(); //初始化 其它的窗口
+    void init_menu_acions(); //初始化 菜单
+    void init_network ();
 private:
-    //ICE_Lrc* iceLrc;
+    ICE_Lrc* iceLrc;
     QMap<qint64, QString> m_lrcMap;
 
     QStringList m_playList;
@@ -100,7 +119,7 @@ private:
 
     int m_preIndex;
     int m_currentIndex;
-    int m_playMode;
+    int m_playMode; // ICE_Play_Mode
 
     /*! 都是图形按钮*/
     ICE_Button* m_minButton;
@@ -139,7 +158,7 @@ private:
     QAction* m_modeSingalCircle;
     QAction* m_modeRandom;
     QAction* m_addMusic;
-    QAction* m_fileDiv;
+    QAction* m_addfileDiv;
     QAction* m_removeCurr;
     QAction* m_removeAll;
 
